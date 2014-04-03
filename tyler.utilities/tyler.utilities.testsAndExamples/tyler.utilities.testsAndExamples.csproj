@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5844DE3-8860-43CE-94EE-5CB737CF053C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{691A5490-E9ED-4EB9-A7AA-2703F52D6D4D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tyler.math</RootNamespace>
-    <AssemblyName>tyler.math</AssemblyName>
+    <RootNamespace>tyler.utilities.testsAndExamples</RootNamespace>
+    <AssemblyName>tyler.utilities.testsAndExamples</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,14 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arithmetic.cs" />
-    <Compile Include="Calculus.cs" />
-    <Compile Include="Datapoint.cs" />
-    <Compile Include="FunctionTerm.cs" />
-    <Compile Include="LinearAlgebra.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Solvers.cs" />
-    <Compile Include="Tests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tyler.math\tyler.math.csproj">
+      <Project>{a5844de3-8860-43ce-94ee-5cb737cf053c}</Project>
+      <Name>tyler.math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tyler.text\tyler.text.csproj">
+      <Project>{6506e583-787f-4cb3-8e9b-2d2fb4f8469c}</Project>
+      <Name>tyler.text</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
