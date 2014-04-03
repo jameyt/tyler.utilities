@@ -66,7 +66,10 @@ namespace tyler.utilities.testsAndExamples
             double newtonsMethodRoot4 = Solvers.NewtonsMethod(function3);
 
             double y5 = function3(4); //Should be 42
-            //Console.Read();                               
+            //Console.Read();
+
+            double d1 = tyler.text.Parsers.Parse("1.0");
+            double d2 = tyler.text.Parsers.Parse("xyz");
         }
     }
 }
