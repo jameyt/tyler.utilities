@@ -12,7 +12,7 @@ namespace tyler.utilities.testsAndExamples
     {
         static void Main(string[] args)
         {
-
+            //Test Comment
             double definiteIntegralAverageError = Tests.TestEstimateDefiniteIntegral();
 
             double firstDerivativeAverageError = Tests.TestEstimateFirstDerivative();
